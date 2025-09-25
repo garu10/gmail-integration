@@ -1,0 +1,74 @@
+/* Basic Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block; /* Essential for containing the dropdown content and positioning */
+}
+
+/* Dropdown Button (the user icon, your existing .sidebar-toggle) */
+.dropbtn {
+    /* Inherit or override your existing .sidebar-toggle styles here */
+    /* Example: Ensure it has enough clickable area and a pointer cursor */
+    padding: 10px 15px;
+    cursor: pointer;
+    /* Styles for the user icon itself */
+}
+
+/* Ensure the user icon looks good within the dropbtn */
+.dropbtn i.fa-user {
+    font-size: 1.5em; /* Adjust size as needed */
+    color: #333; /* Default icon color */
+}
+
+.dropbtn:hover i.fa-user {
+    color: #007bff; /* Icon color on hover */
+}
+
+
+/* Dropdown Content (the menu that appears) */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positions it relative to the .dropdown container */
+    background-color: #f9f9f9; /* Light background for the dropdown menu */
+    min-width: 160px; /* Minimum width of the dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensures it appears above other page content */
+    right: 0; /* Aligns the dropdown to the right edge of its parent (.dropdown) */
+    border-radius: 5px; /* Slightly rounded corners */
+    overflow: hidden; /* Ensures content respects border-radius */
+    margin-top: 5px; /* Small vertical gap between the button and the dropdown */
+}
+
+/* Links and items inside the dropdown content */
+.dropdown-content a {
+    color: black; /* Default text color for links */
+    padding: 12px 16px; /* Padding inside each link */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Makes each link fill the full width of the dropdown */
+    text-align: left; /* Aligns text to the left within the link */
+    font-size: 0.9em; /* Slightly smaller font size */
+    border-bottom: 1px solid #eee; /* Light separator line between links */
+}
+
+/* Remove the border from the last link in the dropdown */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Styling for the logged-in account name (if present) */
+.dropdown-content a.account-name {
+    font-weight: bold; /* Make the account name bold */
+    color: #333; /* Darker color for the name */
+    cursor: default; /* Change cursor to default, indicating it's not a clickable link */
+    background-color: #e0e0e0; /* Different background to highlight the name */
+}
+
+/* Hover effect for clickable links within the dropdown (excluding the account name) */
+.dropdown-content a:not(.account-name):hover {
+    background-color: #ddd; /* Lighter background on hover */
+    color: #007bff; /* Example highlight color on hover */
+}
+
+/* Rule to show the dropdown content when the main .dropdown container is hovered */
+.dropdown:hover .dropdown-content {
+    display: block; /* Changes display from none to block to make it visible */
+}

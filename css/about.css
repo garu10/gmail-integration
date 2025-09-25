@@ -1,0 +1,306 @@
+/* === Base Section === */
+section {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+/* === General About Section === */
+.about-description {
+  padding: 0 5vw;
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.about-description .name h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #4facfe;
+  margin: 2rem 0;
+}
+
+.about-description .autohub {
+  color: #4facfe;
+}
+
+.about-description p {
+  font-size: 2rem;
+  line-height: 1.7;
+  max-width: 1600px;
+  margin: 1.5rem auto 4rem;
+  color: #dddddd;
+  text-align: justify;
+}
+
+/* === Video Section === */
+.video-wrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.headline-video {
+  width: 100vw;
+  height: auto;
+  display: block;
+  margin-bottom: 40px;
+  object-fit: contain;
+}
+
+/* === Mission & Vision Sections === */
+.mission-section,
+.vision-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 6rem 8%;
+  flex-wrap: wrap;
+  background-color: #111;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.vision-section {
+  display: flex;
+  flex-direction: row; /* IMAGE LEFT, TEXT RIGHT */
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 6rem 8%;
+  background-color: #111;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: nowrap; /* Prevent image from dropping below */
+}
+
+.mission-section {
+  flex-direction: row-reverse;
+}
+
+.mission-images {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1 1 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-images img {
+  width: calc(50% - 0.75rem);
+  max-width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 5px solid #4facfe;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-images img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
+}
+
+.mission-vision-text-content {
+  flex: 1 1 500px;
+  max-width: 700px;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.mission-vision-text-content h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0f52ba, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 10px solid #4facfe;
+  padding-left: 20px;
+}
+
+.mission-vision-text-content p {
+  font-size: 1.8rem;
+  line-height: 1.9;
+  color: #cccccc;
+  text-align: justify;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .mission-section,
+  .vision-section {
+    flex-direction: column;
+  }
+
+  .mission-images {
+    flex-direction: column;
+  }
+
+  .mission-images img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mission-vision-text-content {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+/* === WHY CHOOSE US SECTION === */
+#why-choose-us {
+  padding: 7rem 10%;
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+#why-choose-us h2 {
+  font-size: 4rem;
+  background: linear-gradient(135deg, #0f52ba, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.features-icons-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.feature-item {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background-color: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+.feature-item .icon {
+  font-size: 3.5rem;
+  color: #4facfe;
+  margin-bottom: 1.2rem;
+}
+
+.feature-item p {
+  font-size: 1.35rem;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+/* === Wrapper to Align Horizontally === */
+.terms-book-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 40px 6vw;
+  flex-wrap: wrap;
+}
+
+/* === TERMS & CONDITIONS / HOW TO BOOK Boxes === */
+.terms-conditions,
+.how-to-book {
+  flex: 1 1 48%;
+  background-color: #121212;
+  padding: 40px;
+  border-top: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  text-align: left;
+  box-sizing: border-box;
+  min-height: 100%; /* keep height consistent */
+}
+
+/* === Section Headings === */
+.terms-conditions h2,
+.how-to-book h2 {
+  font-size: 3rem;
+  color: #4facfe;
+  margin-bottom: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === Lists === */
+.terms-conditions ul,
+.how-to-book ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.terms-conditions li,
+.how-to-book li {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-left: 5px solid #4facfe;
+  background: #1a1a1a;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.terms-conditions li:hover,
+.how-to-book li:hover {
+  background: #222;
+}
+
+.terms-conditions li i,
+.how-to-book li i {
+  color: #4facfe;
+  font-size: 1.4rem;
+}
+
+/* === Extra Heading in How to Book Section === */
+.how-to-book h3 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.how-to-book h3 i {
+  color: #4facfe;
+  font-size: 1.5rem;
+}
+
+/* === Responsive: Stack on Mobile === */
+@media (max-width: 768px) {
+  .terms-book-wrapper {
+    flex-direction: column;
+  }
+
+  .terms-conditions,
+  .how-to-book {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,466 @@
+/*
+-----Don't have yet their own css file or still not move to another css file form style.css-------
+booking_success.php
+car_category.php
+cars.php
+confirmation.php
+logout.php
+*/
+
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* send it to the back */
+}
+.home-wrapper {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    align-items: center;        /* vertical centering */
+    justify-content: center;    /* horizontal centering */
+    height: 100vh;              /* fill the viewport height */
+    padding: 0 20px;
+    text-align: center;         /* optional, center text */
+    position: relative; /* no longer fixed */
+}
+.home-content {
+    position: relative;
+    z-index: 10; /* higher than image */
+    padding-left: 50px;
+    flex-shrink: 0;
+    max-width: 800px;
+    margin-top: 30px;
+}
+.home-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 300px;
+}
+.home-content h1 {
+    width: 1200px;
+    font-style: italic;
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.home-content h1 .otr {
+    background: linear-gradient(to right, #C2CEFF, #4167FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Optional for other browsers */
+    text-fill-color: transparent; /* Optional fallback */
+}
+
+.home-content p {
+    width: 800px;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+.home-content a {
+    font-size: 25px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 50px;
+    transition: background 0.3s;
+    background: linear-gradient(to right, #C2CEFF, #4167FF);
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+}
+.home-content a:hover {
+    background-color: #555;
+}
+/* This search-form is likely for the homepage search */
+.search-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1500px; /* This width is likely too large for smaller screens, consider max-width here instead */
+    /* Updated for responsiveness and balancing */
+    max-width: 100%; /* Ensure it fits within parent */
+    padding: 0 20px; /* Add some horizontal padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+.search-form select,
+.search-form .search-btn,
+.search-form input[type="text"] { /* Added input[type="text"] here */
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    /* Ensure consistent height */
+    height: 48px; /* Standardized height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: 100%; /* Make inputs/selects take full width of their flex container */
+}
+
+.search-form select {
+    min-width: 150px;
+    /* Added flex properties for better alignment */
+    flex-grow: 1; /* Allow select to grow and fill space */
+}
+.search-btn {
+    background: linear-gradient(to right, #C2CEFF, #4167FF);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.search-btn:hover {
+    background: #555;
+    color: white;
+}
+.car-categories-text {
+    text-align: center;
+    margin: 100px auto; /* centers horizontally with spacing above and below */
+    max-width: 1000px;    /* optional: limits width for better readability */
+    font-family: 'Poppins', sans-serif;
+}
+.car-categories-text h1 {
+    max-width: 100%;
+    width: auto;
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+.car-categories-text h1 .only {
+    background: linear-gradient(to right, #C2CEFF, #4167FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Optional for other browsers */
+    text-fill-color: transparent; /* Optional fallback */
+}
+.car-categories-text a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(to right, #C2CEFF, #4167FF);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.car-categories-text a:hover {
+    background-color: #555;
+}
+.car-categories-home {
+    display: flex;
+    flex-wrap: wrap; /* optional, allows wrapping to next line if screen is small */
+    gap: 20px; /* space between category boxes */
+    justify-content: center; /* center the items horizontally */
+    margin-bottom: 100px; /* optional spacing below */
+}
+.category-box {
+    width: 180px;
+    text-align: center;
+    border-radius: 8px;
+    background: transparent;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+.category-box:hover {
+    transform: scale(1.05);
+}
+.category-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+.category-box p {
+    text-decoration: none;
+    color: white;
+}
+.home-banners {
+    display: flex;
+    flex-direction: column;    /* stack vertically */
+    gap: 30px;                /* vertical gap between banners */
+    padding: 40px;
+    max-width: 1500px;         /* control overall width */
+    margin: 0 auto;           /* center horizontally */
+}
+.home-banners h1 .banner-texts{
+    font-size: 4rem;
+    text-align: center;
+    background: linear-gradient(to right, #C2CEFF, #4167FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Optional fallback */
+    color: #4167FF;
+    font-style: italic;
+}
+.banner {
+    width: 100%;
+    max-width: 1500px;  /* or your desired max width */
+    height: 400px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto; /* Ensures full image height scales naturally */
+  object-fit: contain; /* Preserves aspect ratio and visibility */
+  border-radius: 12px;
+  padding: 4px; /* Creates space for border effect */
+  background: linear-gradient(to right, #3a8ef8, #00c6ff); /* Gradient border */
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.banner img:hover {
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+}
+
+
+
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 12px;
+    padding: 4px; /* thickness of border */
+    background: linear-gradient(to right, #C2CEFF, #4167FF);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-text h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.banner-text p {
+    margin-top: 5px;
+    font-size: 0.95rem;
+}
+.site-strengths {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between;
+    padding: 40px;
+    background-color: transparent;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 100px;
+}
+.site-text {
+    font-size: 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+.strength-card {
+    width: 23%; /* Ensures 4 cards fit in one line (100% - 3 gaps of ~20px) */
+    background: transparent;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    border-radius: 13px;
+}
+.strength-card:hover {
+    transform: translateY(-5px);
+}
+
+.strength-card i {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 15px;
+}
+.strength-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #9EC5FF;
+}
+.strength-card p {
+    font-size: 0.95rem;
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+
+    /* Background image settings */
+    background-image: url('../images/background.jpg');  /* Path to your image */
+    background-size: cover;        /* Make the image cover the whole area */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    background-attachment: fixed; /* Make the background stay fixed on scroll */
+}
+/* Removed the problematic generic h2 rule from global styles */
+/* h2 {
+    color: #333;
+} */
+/* Removed the problematic generic h1 rule from global styles */
+/* h1 {
+    color: #333;
+} */
+
+/* The .car-list, .car-grid, .car, .car-title, .car-attributes,
+   .car-image-container img, .car-price, .book-button
+   styles have been moved to available_cars.css
+*/
+
+.category-slider {
+    text-align: center; /* center image and arrows */
+    margin-top: 20px;
+}
+/* This .car-container refers to the main car listing container, not the individual car item */
+/* If you want to apply margin-top to the overall container of cars, this is fine */
+/* If it was meant for individual cars, it should be scoped more specifically */
+/* This is already present above for a single car display, so removing this duplicate might be an option
+   if it's not serving a different purpose here. I'll leave it for now assuming context.
+*/
+.car-container {
+    margin-top: 10px;
+}
+.category-image {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 0px;
+}
+.arrow-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.arrow-btn {
+    font-size: 2rem;
+    color: #fff;
+    background: linear-gradient(to right, #9EC5FF, #337EAA);
+    border: 2px; /* You might want to specify border-style, e.g., solid, for this to be visible */
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.arrow-btn:hover {
+    background-color: #123f8a;
+}
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+form {
+    margin: 20px 0;
+}
+/* These generic input styles will apply to all input[type="text"], input[type="password"] */
+/* Consider if you want them to be global or more specific */
+input[type="text"], input[type="password"] {
+    padding: 8px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+input[type="submit"] {
+    padding: 8px 15px;
+}
+.form-container {
+    width: 100%;            /* Let it stretch to its parent's width */
+    max-width: 100%;        /* Prevent overflow */
+    padding: 0 40px;        /* Add left-right padding to center the contents */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Keeps contents centered */
+    background-color: black;
+    border-radius: 30px;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;       /* Controls the content width */
+    width: 100%;
+    justify-content: center;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    /* Added alignment for flex items */
+    justify-content: flex-end; /* Align content to the bottom of the group */
+    align-items: stretch; /* Stretch items to fill the container width */
+}
+.form-group label {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: left; /* Ensure label text is left-aligned */
+}
+.form-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px;
+    min-width: 250px; /* Increased min-width for more space */
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex; /* Make form-section a flex container */
+    flex-direction: column; /* Stack its contents vertically */
+    justify-content: space-between; /* Distribute space between form groups */
+}
+
+.form-section h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
