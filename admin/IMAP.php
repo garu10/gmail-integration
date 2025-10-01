@@ -7,8 +7,8 @@
 
 // Added /novalidate-cert to help with self-signed or older certs
 define('IMAP_SERVER', '{imap.gmail.com:993/imap/ssl/novalidate-cert}');
-define('EMAIL_ADDRESS', 'mackayjhondrei632@gmail.com');
-define('PASSWORD', 'mxfs lepk odmr tmpz'); // <-- App Password from Gmail
+define('EMAIL_ADDRESS', 'sintadriveph@gmail.com');
+define('PASSWORD', 'hbnx prwb ijec ukmf'); // <-- App Password from Gmail
 
 // Set content type to JSON by default, but this will be overridden for file downloads
 header('Content-Type: application/json');

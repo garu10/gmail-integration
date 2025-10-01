@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  color: #1f2937;
+}
+/* h1 as navbar */
+h1.text-center {
+  font-size: 1.5rem;           
+  color: #ffffff;
+  background-color: #1F2937;    
+  padding: 1rem 2rem;          
+  margin: 0;          
+  position: sticky;            
+  top: 0;
+  left: 0;
+  z-index: 1000;    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;         
+}
+
+h1.text-center .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1.text-center .nav-links li {
+  display: inline-block;
+}
+
+h1.text-center .nav-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1.text-center .nav-links a:hover {
+  background-color: #374151; 
+  color: #fff;
+}
+
+
+h1.text-center .btn-logout {
+  background-color: #dc2626; 
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}   
+
+h1.text-center .btn-logout:hover {
+  background-color: #b91c1c; 
+}
+
+/*title container*/ 
+.title-container {
+  background-color: #ffffff;   
+  color: #1f2937;              
+  font-size: 1.25rem;         
+  font-weight: 600;           
+  padding: 1rem 1.5rem;       
+  border-radius: 0.5rem;   
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 1rem;        
+  text-align: left;          
+}
+
+
+/*main container*/
+.container {
+  width: 100%;
+  min-height: 100vh; 
+  background-color: #f9fafb; 
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.container form {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff; 
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="file"],
+.container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: #f9fafb;
+  color: #111827;
+  font-size: 1rem;
+  outline: none;
+}
+
+.container input:focus,
+.container textarea:focus {
+  border-color: #2563eb;
+  background-color: #fff;
+}
+
+.container input[type="submit"] {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.container input[type="submit"]:hover {
+  background-color: #1d4ed8;
+}

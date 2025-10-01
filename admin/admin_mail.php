@@ -9,16 +9,31 @@ require __DIR__ . '/mail_bootstrap/bootstrap.config.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PHP MAILER</title>
+  <link rel="stylesheet" href="../css/admin_mail.css">
+  <title>Sinta Drive - PHP MAILER</title>
 </head>
 <body>
-  <h1 class="text-center"> Trying PHP Mailer </h1>
+  <h1 class="text-center">
+    <div class="logo">Admin Panel</div>
+
+    <ul class="nav-links">
+      <li><a href="admin_dashboard.php">Dashboard</a></li>
+      <li><a href="admin_cars.php">Manage Cars</a></li>
+      <li><a href="admin_bookings.php">Manage Bookings</a></li>
+      <li><a href="admin_clients.php">Manage Clients</a></li>
+      <li><a href="admin_locations.php">Manage Locations</a></li>
+      <li><a href="admin_car_status.php">Manage Car Status</a></li>
+      <li><a href="admin_payments.php">Payments</a></li>
+    </ul>
+
+    <a href="logout.php" class="btn-logout">Logout</a>
+  </h1>
+
+  <div class="title-container"> Client Email Verification </div> 
 
   <div class="container">
     <form  action="admin_main_mail.php" method="POST" enctype="multipart/form-data">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" class="form-control mb-3" required>
-
+      
       <label for="email">Email</label>
       <input type="email" name="email" id="email" class="form-control mb-3" value="<?php echo htmlspecialchars($_GET['to'] ?? ''); ?>" required>
 

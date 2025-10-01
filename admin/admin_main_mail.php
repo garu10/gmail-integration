@@ -13,7 +13,7 @@ try {
 
   $mailer = new Mailer($config);
 
-  $mailer->setSender("alcantarajohnralph@gmail.com", "Ralph"); 
+  $mailer->setSender("sintadriveph@gmail.com", "SintaDrive"); 
   $mailer->addRecipient($email, $name);
   $mailer->addAttachment($attachment);
   $mailer->setSubject($subject);
