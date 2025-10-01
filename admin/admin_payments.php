@@ -149,7 +149,7 @@ $payments = [];
 $sql = "SELECT p.*,
                b.booking_id, b.start_date, b.return_date, b.booking_status,
                c.car_brand, c.car_model, c.car_platenumber,
-               cl.client_first_name, cl.client_last_name
+               cl.client_first_name, cl.client_last_name, cl.client_email_address
         FROM Payments p
         JOIN Bookings b ON p.booking_id = b.booking_id
         JOIN Cars c ON b.car_code = c.car_code
@@ -206,7 +206,9 @@ if ($result) {
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ref Number</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Method</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Proof</th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Payment Status</th> <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Payment Status</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
@@ -244,6 +246,14 @@ if ($result) {
                                                 ?>">
                                                 <?php echo htmlspecialchars(ucfirst($payment['payment_status'])); ?>
                                             </span>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                            <a href="admin_mail.php?to=<?php echo htmlspecialchars($payment['client_email_address'] ?? ''); ?>" class="text-blue-500 hover:text-blue-700" aria-label="Email Client">
+                                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                                </svg>
+                                            </a>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <?php if ($payment['payment_status'] === 'pending'): ?>
